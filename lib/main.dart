@@ -11,12 +11,15 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.grey[100], 
         body: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly, 
+            crossAxisAlignment: CrossAxisAlignment.start, 
             children: [
               const Text(
                 'Hello World!',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
               ),
               const Text(
                 'Bienvenue à Flutter Mohib',
@@ -25,35 +28,42 @@ class MainApp extends StatelessWidget {
 
               
               Container(
-                margin: const EdgeInsets.all(20),
-                padding: const EdgeInsets.all(16),
-                decoration: const BoxDecoration(
-                  color: Colors.blueAccent,
-                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                margin: const EdgeInsets.symmetric(horizontal: 40, vertical: 10),
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: Colors.teal, 
+                  borderRadius: BorderRadius.circular(18),
+                  boxShadow: const [
+                    BoxShadow(
+                      color: Colors.black26,
+                      blurRadius: 10,
+                      offset: Offset(3, 3),
+                    ),
+                  ],
                 ),
                 child: const Text(
                   'Bekkai',
                   style: TextStyle(
                     color: Colors.white,
-                    fontSize: 22,
-                    fontWeight: FontWeight.w600,
+                    fontSize: 24,
+                    fontWeight: FontWeight.w700,
                   ),
                 ),
               ),
 
               
               Stack(
-                alignment: Alignment.topRight,
+                alignment: Alignment.bottomLeft, 
                 children: [
                   Container(
                     width: 200,
                     height: 200,
-                    color: Colors.blueAccent,
+                    color: Colors.deepPurpleAccent,
                   ),
                   const Icon(
                     Icons.star,
-                    size: 100,
-                    color: Colors.amber,
+                    size: 90,
+                    color: Colors.yellow,
                   ),
                   const Text(
                     "Superposé !",
@@ -68,34 +78,34 @@ class MainApp extends StatelessWidget {
 
               
               Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                mainAxisAlignment: MainAxisAlignment.spaceAround, 
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: const [
-                  Icon(Icons.home, color: Colors.blue, size: 40),
-                  Icon(Icons.star, color: Colors.amber, size: 40),
-                  Icon(Icons.settings, color: Colors.grey, size: 40),
-                  Icon(Icons.favorite, color: Colors.red, size: 40),
+                  Icon(Icons.home, color: Colors.blue, size: 45),
+                  Icon(Icons.star, color: Colors.amber, size: 45),
+                  Icon(Icons.settings, color: Colors.grey, size: 45),
+                  Icon(Icons.favorite, color: Colors.red, size: 45),
                 ],
               ),
 
               
               Column(
                 mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.end, 
                 children: const [
                   Text(
                     'Titre principal',
-                    style: TextStyle(fontSize: 28, fontWeight: FontWeight.bold),
+                    style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
                   ),
                   SizedBox(height: 20),
                   Text(
                     'Sous-titre ou description',
-                    style: TextStyle(fontSize: 20, color: Colors.black54),
+                    style: TextStyle(fontSize: 22, color: Colors.black87),
                   ),
                   Icon(
                     Icons.thumb_up,
                     color: Colors.green,
-                    size: 45,
+                    size: 50,
                   ),
                 ],
               ),
