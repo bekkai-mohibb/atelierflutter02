@@ -9,13 +9,30 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
         body: Center(
           child: Column(
             children: [
-              Text('Hello World!'),
-              Text('Bienvenue à Flutter Mohib'),
+              const Text('Hello World!'),
+              const Text('Bienvenue à Flutter Mohib'),
+
+              
+              Container(
+                margin: const EdgeInsets.all(20),
+                padding: const EdgeInsets.all(16),
+                decoration: const BoxDecoration(
+                  color: Colors.blueAccent,
+                  borderRadius: BorderRadius.all(Radius.circular(12)),
+                ),
+                child: const Text(
+                  'Bekkai',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                  ),
+                ),
+              ),
             ],
           ),
         ),
